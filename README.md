@@ -66,8 +66,39 @@ Here are some highlighted samples from our text-conditional model. For random sa
 
 Install with `pip install -e .`.
 
-To get started with examples, see the following notebooks:
+# Shap-E 3D Generation API
 
-* [sample_text_to_3d.ipynb](shap_e/examples/sample_text_to_3d.ipynb) - sample a 3D model, conditioned on a text prompt.
-* [sample_image_to_3d.ipynb](shap_e/examples/sample_image_to_3d.ipynb) - sample a 3D model, conditioned on a synthetic view image. To get the best result, you should remove background from the input image.
-* [encode_model.ipynb](shap_e/examples/encode_model.ipynb) - loads a 3D model or a trimesh, creates a batch of multiview renders and a point cloud, encodes them into a latent, and renders it back. For this to work, install Blender version 3.3.1 or higher, and set the environment variable `BLENDER_PATH` to the path of the Blender executable.
+Generate 3D models from text prompts using OpenAI's [Shap-E](https://github.com/openai/shap-e) and FastAPI.
+
+---
+
+##  Features
+
+- Text-to-3D generation using Shap-E
+- Downloads in `.glb`, `.obj`, `.ply`
+- REST API with FastAPI
+- Sample 3D outputs included
+
+---
+
+##  Setup Instructions
+
+```bash
+git clone https://github.com/YOUR_USERNAME/shap-e-api.git
+cd shap-e-api
+python3 -m venv venv
+source venv/bin/activate
+pip install -e ./shap-e
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+##  Sample Outputs
+
+Click to download or preview:
+
+-  [futuristic_helmet.glb](samples/futuristic_helmet.glb)
+-  [futuristic_helmet.obj](samples/futuristic_helmet.obj)
+-  [spaceship.glb](samples/spaceship.glb)
+
+Preview online: [gltf-viewer.donmccurdy.com](https://gltf-viewer.donmccurdy.com/)
+
