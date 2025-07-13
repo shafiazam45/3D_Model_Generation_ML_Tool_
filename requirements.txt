@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+trimesh
+pyrender
+matplotlib
+imageio
+pyyaml
+ipywidgets
